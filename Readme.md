@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов» [![Build status][travis-image]][travis-url]
 
 * Студент: [Анастасия Ничипорчук](https://up.htmlacademy.ru/react/1/user/612797).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Погорелов](https://up.htmlacademy.ru/react/1/user/1031283).
 
 ---
 
