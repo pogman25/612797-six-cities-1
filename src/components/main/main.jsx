@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Main = (props) => {
-  const {places} = props;
+  const {places, onCardHeaderClick} = props;
   return (<main className="page__main page__main--index">
     <h1 className="visually-hidden">Cities</h1>
     <div className="cities tabs">
@@ -96,7 +96,7 @@ const Main = (props) => {
                     <span className="visually-hidden">Rating</span>
                   </div>
                 </div>
-                <h2 className="place-card__name">
+                <h2 className="place-card__name place-card__name--test" onClick={onCardHeaderClick}>
                   <a href="#">{places[0]}</a>
                 </h2>
                 <p className="place-card__type">Apartment</p>
@@ -128,7 +128,7 @@ const Main = (props) => {
                     <span className="visually-hidden">Rating</span>
                   </div>
                 </div>
-                <h2 className="place-card__name">
+                <h2 className="place-card__name" onClick={onCardHeaderClick}>
                   <a href="#">{places[1]}</a>
                 </h2>
                 <p className="place-card__type">Private room</p>
@@ -160,7 +160,7 @@ const Main = (props) => {
                     <span className="visually-hidden">Rating</span>
                   </div>
                 </div>
-                <h2 className="place-card__name">
+                <h2 className="place-card__name" onClick={onCardHeaderClick}>
                   <a href="#">{places[3]}</a>
                 </h2>
                 <p className="place-card__type">Apartment</p>
@@ -195,7 +195,7 @@ const Main = (props) => {
                     <span className="visually-hidden">Rating</span>
                   </div>
                 </div>
-                <h2 className="place-card__name">
+                <h2 className="place-card__name" onClick={onCardHeaderClick}>
                   <a href="#">{places[2]}</a>
                 </h2>
                 <p className="place-card__type">Apartment</p>
@@ -227,7 +227,7 @@ const Main = (props) => {
                     <span className="visually-hidden">Rating</span>
                   </div>
                 </div>
-                <h2 className="place-card__name">
+                <h2 className="place-card__name" onClick={onCardHeaderClick}>
                   <a href="#">{places[0]}</a>
                 </h2>
                 <p className="place-card__type">Private room</p>
@@ -245,7 +245,8 @@ const Main = (props) => {
 };
 
 Main.propTypes = {
-  places: PropTypes.array
+  places: PropTypes.array,
+  onCardHeaderClick: PropTypes.func
 };
 
 
