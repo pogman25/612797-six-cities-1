@@ -284,10 +284,10 @@ exports[`App correctly renders after relaunch 1`] = `
               </div>
               <h2
                 className="place-card__name place-card__name--test"
-                onClick={[MockFunction]}
               >
                 <a
                   href="#"
+                  onClick={[MockFunction]}
                 />
               </h2>
               <p
@@ -377,10 +377,10 @@ exports[`App correctly renders after relaunch 1`] = `
               </div>
               <h2
                 className="place-card__name"
-                onClick={[MockFunction]}
               >
                 <a
                   href="#"
+                  onClick={[MockFunction]}
                 />
               </h2>
               <p
@@ -470,10 +470,10 @@ exports[`App correctly renders after relaunch 1`] = `
               </div>
               <h2
                 className="place-card__name"
-                onClick={[MockFunction]}
               >
                 <a
                   href="#"
+                  onClick={[MockFunction]}
                 />
               </h2>
               <p
@@ -570,10 +570,10 @@ exports[`App correctly renders after relaunch 1`] = `
               </div>
               <h2
                 className="place-card__name"
-                onClick={[MockFunction]}
               >
                 <a
                   href="#"
+                  onClick={[MockFunction]}
                 />
               </h2>
               <p
@@ -663,10 +663,10 @@ exports[`App correctly renders after relaunch 1`] = `
               </div>
               <h2
                 className="place-card__name"
-                onClick={[MockFunction]}
               >
                 <a
                   href="#"
+                  onClick={[MockFunction]}
                 />
               </h2>
               <p

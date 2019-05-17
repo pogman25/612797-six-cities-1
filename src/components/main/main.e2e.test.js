@@ -12,7 +12,7 @@ it(`Main correctly renders after relaunch`, () => {
     onCardHeaderClick = {clickHandler}
   />);
 
-  const cardHeader = main.find(`.place-card__name--test`);
+  const cardHeader = main.find(`.place-card__name--test a`);
   cardHeader.simulate(`click`);
 
   expect(clickHandler).toHaveBeenCalledTimes(1);

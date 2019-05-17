@@ -96,8 +96,8 @@ const Main = (props) => {
                     <span className="visually-hidden">Rating</span>
                   </div>
                 </div>
-                <h2 className="place-card__name place-card__name--test" onClick={onCardHeaderClick}>
-                  <a href="#">{places[0]}</a>
+                <h2 className="place-card__name place-card__name--test">
+                  <a href="#" onClick={onCardHeaderClick}>{places[0]}</a>
                 </h2>
                 <p className="place-card__type">Apartment</p>
               </div>
@@ -128,8 +128,8 @@ const Main = (props) => {
                     <span className="visually-hidden">Rating</span>
                   </div>
                 </div>
-                <h2 className="place-card__name" onClick={onCardHeaderClick}>
-                  <a href="#">{places[1]}</a>
+                <h2 className="place-card__name">
+                  <a href="#" onClick={onCardHeaderClick}>{places[1]}</a>
                 </h2>
                 <p className="place-card__type">Private room</p>
               </div>
@@ -160,8 +160,8 @@ const Main = (props) => {
                     <span className="visually-hidden">Rating</span>
                   </div>
                 </div>
-                <h2 className="place-card__name" onClick={onCardHeaderClick}>
-                  <a href="#">{places[3]}</a>
+                <h2 className="place-card__name">
+                  <a href="#" onClick={onCardHeaderClick}>{places[3]}</a>
                 </h2>
                 <p className="place-card__type">Apartment</p>
               </div>
@@ -195,8 +195,8 @@ const Main = (props) => {
                     <span className="visually-hidden">Rating</span>
                   </div>
                 </div>
-                <h2 className="place-card__name" onClick={onCardHeaderClick}>
-                  <a href="#">{places[2]}</a>
+                <h2 className="place-card__name">
+                  <a href="#" onClick={onCardHeaderClick}>{places[2]}</a>
                 </h2>
                 <p className="place-card__type">Apartment</p>
               </div>
@@ -227,8 +227,8 @@ const Main = (props) => {
                     <span className="visually-hidden">Rating</span>
                   </div>
                 </div>
-                <h2 className="place-card__name" onClick={onCardHeaderClick}>
-                  <a href="#">{places[0]}</a>
+                <h2 className="place-card__name">
+                  <a href="#" onClick={onCardHeaderClick}>{places[0]}</a>
                 </h2>
                 <p className="place-card__type">Private room</p>
               </div>
