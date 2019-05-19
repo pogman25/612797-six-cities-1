@@ -4,14 +4,13 @@ import PropTypes from 'prop-types';
 
 
 const App = (props) => {
-  const {places} = props;
-  return (<Main
-    places = {places}
-  />);
+  const {places, onCardHeaderClick} = props;
+  return <Main places={places} onCardHeaderClick={onCardHeaderClick} />;
 };
 
 App.propTypes = {
-  places: PropTypes.array
+  places: PropTypes.array,
+  onCardHeaderClick: PropTypes.func
 };
 
 export default App;
