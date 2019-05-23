@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import OfferCard from '../offer-card/offer-card.jsx';
+import offers from '../../mocks/offers.js';
 
 const Main = (props) => {
   const {places, onCardHeaderClick} = props;
+  console.log(OfferCard(offers[0], onCardHeaderClick));
   return (<main className="page__main page__main--index">
     <h1 className="visually-hidden">Cities</h1>
     <div className="cities tabs">
