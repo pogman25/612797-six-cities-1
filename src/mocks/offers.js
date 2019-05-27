@@ -5,7 +5,8 @@ const offers = [
     rate: 4,
     src: `img.jpg`,
     premium: `no`,
-    description: `Wood and stone place`
+    description: `Wood and stone place`,
+    id: 1
   },
   {
     type: `Apartment`,
@@ -13,7 +14,8 @@ const offers = [
     rate: 5,
     src: `img.jpg`,
     premium: `yes`,
-    description: `Beautiful luxurious apartment at great location`
+    description: `Beautiful luxurious apartment at great location`,
+    id: 2
   },
   {
     type: `Apartment`,
@@ -21,7 +23,8 @@ const offers = [
     rate: 4,
     src: `img.jpg`,
     premium: `no`,
-    description: `Nice, cozy, warm big bed apartment`
+    description: `Nice, cozy, warm big bed apartment`,
+    id: 3
   },
   {
     type: `Apartment`,
@@ -29,7 +32,8 @@ const offers = [
     rate: 4.5,
     src: `img.jpg`,
     premium: `yes`,
-    description: `Canal View Prinsengracht`
+    description: `Canal View Prinsengracht`,
+    id: 4
   }
 ];
 

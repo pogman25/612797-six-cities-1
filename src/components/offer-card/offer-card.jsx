@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 const OfferCard = (offer, onCardHeaderClick) => {
   //const {offer, onCardHeaderClick} = props;
-  console.log(offer.premium);
+
   const premium = offer.premium === `yes` ?
       <div className="place-card__mark">
         <span>Premium</span>
       </div>
     : ``;
-  return (<article className="cities__place-card place-card">
+  return (<article className="cities__place-card place-card" key={offer.id}>
     {premium}
     <div className="cities__image-wrapper place-card__image-wrapper">
       <a href="#">
@@ -31,7 +31,7 @@ const OfferCard = (offer, onCardHeaderClick) => {
       </div>
       <div className="place-card__rating rating">
         <div className="place-card__stars rating__stars">
-          <span style={{width: `93%`}}></span>
+          <span style={{width: `${offer.rating * 20}%`}}></span>
           <span className="visually-hidden">Rating</span>
         </div>
       </div>
