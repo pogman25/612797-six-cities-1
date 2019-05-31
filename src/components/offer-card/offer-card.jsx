@@ -1,15 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const OfferCard = (offer, onCardHeaderClick) => {
-  //const {offer, onCardHeaderClick} = props;
-
+const OfferCard = (offer, key, onCardHeaderClick) => {
+  offer = offer.offer;
   const premium = offer.premium === `yes` ?
-      <div className="place-card__mark">
-        <span>Premium</span>
-      </div>
+    <div className="place-card__mark">
+      <span>Premium</span>
+    </div>
     : ``;
-  return (<article className="cities__place-card place-card" key={offer.id}>
+  return (<article className="cities__place-card place-card" key={key}>
     {premium}
     <div className="cities__image-wrapper place-card__image-wrapper">
       <a href="#">
@@ -44,5 +43,18 @@ const OfferCard = (offer, onCardHeaderClick) => {
   );
 };
 
+OfferCard.propTypes = {
+  /* offer: PropTypes.shape({
+    type: PropTypes.string,
+    price: PropTypes.string,
+    rate: PropTypes.number,
+    src: PropTypes.string,
+    premium: PropTypes.string,
+    description: PropTypes.string,
+    id: PropTypes.number
+  }),*/
+  offer: PropTypes.array,
+  onCardHeaderClick: PropTypes.func
+};
 
 export default OfferCard;

@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import OfferCard from '../offer-card/offer-card.jsx';
 import OfferCardsList from '../offer-list/offer-list.jsx';
-import offers from '../../mocks/offers.js';
 
 const Main = (props) => {
-  const {places, onCardHeaderClick} = props;
+  const {offers, onCardHeaderClick} = props;
   return (<main className="page__main page__main--index">
     <h1 className="visually-hidden">Cities</h1>
     <div className="cities tabs">
@@ -70,7 +68,11 @@ const Main = (props) => {
               <option className="places__option" value="top-rated">Top rated first</option>
             </select>
           </form>
-          {OfferCardsList(offers, onCardHeaderClick)}
+          <OfferCardsList
+            offers = {offers}
+            onCardHeaderClick = {onCardHeaderClick}
+          />
+
         </section>
         <div className="cities__right-section">
           <section className="cities__map map"></section>
@@ -82,7 +84,7 @@ const Main = (props) => {
 };
 
 Main.propTypes = {
-  places: PropTypes.array,
+  offers: PropTypes.array,
   onCardHeaderClick: PropTypes.func
 };
 
