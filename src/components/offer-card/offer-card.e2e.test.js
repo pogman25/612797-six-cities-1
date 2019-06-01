@@ -13,6 +13,6 @@ it(`Simulating click to offer card title`, () => {
     onCardHeaderClick={onClick}
   />);
   const cardTitle = card.find(`.place-card__name a`);
-  cardTitle.simulate(`click`, {preventDefault() {}});
+  cardTitle.simulate(`click`);
   expect(onClick).toHaveBeenCalledTimes(1);
 });
