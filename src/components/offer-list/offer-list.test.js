@@ -1,11 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Main from './main.jsx';
+import OfferCardsList from './offer-list.jsx';
 
-it(`Main correctly renders after relaunch`, () => {
+it(`OfferCardsList correctly renders after relaunch`, () => {
   const tree = renderer
-  .create(<Main
-    offers = {[]}
+  .create(<OfferCardsList
+    offers= {[]}
     onCardHeaderClick={jest.fn()}
   />)
   .toJSON();

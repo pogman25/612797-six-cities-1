@@ -5,7 +5,7 @@ import App from './app.jsx';
 it(`App correctly renders after relaunch`, () => {
   const tree = renderer
   .create(<App
-    places = {[]}
+    offers = {[]}
     onCardHeaderClick={jest.fn()}
   />)
   .toJSON();
