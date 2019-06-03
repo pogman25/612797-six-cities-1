@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import OfferCardsList from '../offer-list/offer-list.jsx';
 
-const Main = (props) => {
-  const {offers, onCardHeaderClick} = props;
+const Main = ({offers, onCardHeaderClick}) => {
   return (<main className="page__main page__main--index">
     <h1 className="visually-hidden">Cities</h1>
     <div className="cities tabs">
@@ -84,7 +83,17 @@ const Main = (props) => {
 };
 
 Main.propTypes = {
-  offers: PropTypes.array,
+  offers: PropTypes.arrayOf(
+      PropTypes.shape({
+        type: PropTypes.string,
+        price: PropTypes.string,
+        rate: PropTypes.number,
+        src: PropTypes.string,
+        premium: PropTypes.string,
+        description: PropTypes.string,
+        id: PropTypes.number,
+      })
+  ),
   onCardHeaderClick: PropTypes.func
 };
 

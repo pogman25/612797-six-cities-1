@@ -4,7 +4,6 @@ exports[`OfferCard correctly renders after relaunch 1`] = `
 <article
   className="cities__place-card place-card"
 >
-  
   <div
     className="cities__image-wrapper place-card__image-wrapper"
   >
@@ -33,6 +32,7 @@ exports[`OfferCard correctly renders after relaunch 1`] = `
           className="place-card__price-value"
         >
           €
+          80
         </b>
         <span
           className="place-card__price-text"
@@ -86,11 +86,15 @@ exports[`OfferCard correctly renders after relaunch 1`] = `
       <a
         href="#"
         onClick={[Function]}
-      />
+      >
+        Wood and stone place
+      </a>
     </h2>
     <p
       className="place-card__type"
-    />
+    >
+      Private room
+    </p>
   </div>
 </article>
 `;
