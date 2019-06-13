@@ -1,8 +1,9 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import Main from './main.jsx';
+import React from "react";
+import renderer from "react-test-renderer";
+import Map from "./map.jsx";
+import offers from '../../mocks/offers.js';
 
-it(`Main correctly renders after relaunch`, () => {
+it(`Map correctly renders after relaunch`, () => {
   const leaflet = {
     map() {
       return {
@@ -21,13 +22,13 @@ it(`Main correctly renders after relaunch`, () => {
       };
     },
   };
+
   const tree = renderer
-  .create(<Main
-    offers = {[]}
-    onCardHeaderClick={jest.fn()}
-    leaflet = {leaflet}
-  />)
-  .toJSON();
+    .create(<Map
+      offers={offers[0]}
+      leaflet={leaflet}
+    />)
+    .toJSON();
 
   expect(tree).toMatchSnapshot();
 });
