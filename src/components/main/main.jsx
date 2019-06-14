@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import OfferCardsList from '../offer-list/offer-list.jsx';
 import Map from "../map/map.jsx";
-import leaflet from "leaflet";
 
 const Main = ({offers, onCardHeaderClick}) => {
   return (<main className="page__main page__main--index">
@@ -78,7 +77,6 @@ const Main = ({offers, onCardHeaderClick}) => {
         <div className="cities__right-section">
           <Map
             offers={offers}
-            leaflet={leaflet}
           />
         </div>
       </div>
