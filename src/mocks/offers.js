@@ -1,5 +1,6 @@
 const offers = [
   {
+    city: `Amsterdam`,
     type: `Private room`,
     price: `80`,
     rate: 4,
@@ -10,6 +11,7 @@ const offers = [
     coords: [52.3909553943508, 4.85309666406198]
   },
   {
+    city: `Berlin`,
     type: `Apartment`,
     price: `120`,
     rate: 5,
@@ -20,6 +22,7 @@ const offers = [
     coords: [52.369553943508, 4.85309666406198]
   },
   {
+    city: `Chicago`,
     type: `Apartment`,
     price: `132`,
     rate: 4,
@@ -30,6 +33,7 @@ const offers = [
     coords: [52.3909553943508, 4.929309666406198]
   },
   {
+    city: `London`,
     type: `Apartment`,
     price: `180`,
     rate: 4.5,
