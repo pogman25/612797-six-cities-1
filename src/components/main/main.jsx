@@ -13,10 +13,10 @@ const Main = ({
   return (<main className="page__main page__main--index">
     <h1 className="visually-hidden">Cities</h1>
     <AllCities
-        onCityClick={onCityClick}
-        cities={cities}
-        city={city}
-      />
+      onCityClick={onCityClick}
+      cities={cities}
+      city={city}
+    />
     <div className="cities__places-wrapper">
       <div className="cities__places-container container">
         <section className="cities__places places">
@@ -45,7 +45,6 @@ const Main = ({
           </form>
           <OfferCardsList
             offers={offers}
-            onCardHeaderClick={onCardHeaderClick}
           />
 
         </section>
@@ -75,7 +74,8 @@ Main.propTypes = {
   ),
   onCityClick: PropTypes.func,
   cities: PropTypes.arrayOf(PropTypes.string),
-  city: PropTypes.string
+  city: PropTypes.string,
+  onCardHeaderClick: PropTypes.func,
 };
 
 

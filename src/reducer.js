@@ -1,8 +1,8 @@
-import {offers} from './mocks/offers.js';
+import offers from './mocks/offers.js';
 
 const initialState = {
   city: `Amsterdam`,
-  offersArray: offers
+  offers
 };
 
 
@@ -19,6 +19,7 @@ const ActionCreator = {
 
   getOffers: () => ({
     type: ActionType.GET_OFFERS,
+    payload: offers
   })
 };
 

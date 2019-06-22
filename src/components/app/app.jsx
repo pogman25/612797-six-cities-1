@@ -22,7 +22,7 @@ const App = (props) => {
 const mapStateToProps = (state, ownProps) => Object.assign({}, ownProps, {
   city: state.city,
   offers: state.offers,
-  //cities: Array.from(new Set(state.offers.map((offer) => offer.city))).slice(0, 4)
+  cities: Array.from(new Set(state.offers.map((offer) => offer.city))).slice(0, 4)
 });
 
 const mapDispatchToProps = (dispatch) => ({

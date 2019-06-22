@@ -4,13 +4,14 @@ import OfferCard from '../offer-card/offer-card.jsx';
 
 
 class OfferCardsList extends PureComponent {
+
   render() {
     return (<div className="cities__places-list places__list tabs__content">
       {this.props.offers.map((it, key) =>
         <OfferCard
           offer={it}
           key={key}
-          onCardHeaderClick = {this.props.onCardHeaderClick}
+          onCardHeaderClick = {() => {}}
         />
       )}
     </div>
