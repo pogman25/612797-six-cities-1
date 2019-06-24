@@ -12,24 +12,22 @@ const App = (props) => {
     city
   } = props;
   return <Main
-    offers={offers}
+    offers={offers.filter((i) => i.city === city)}
     onCityClick={onCityClick}
     cities = {cities}
     city = {city}
   />;
 };
 
-const mapStateToProps = (state, ownProps) => Object.assign({}, ownProps, {
+const mapStateToProps = (state) => ({
   city: state.city,
   offers: state.offers,
   cities: Array.from(new Set(state.offers.map((offer) => offer.city))).slice(0, 4)
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  onCityClick: (city) => {
-    dispatch(ActionCreator.onCityClick(city));
-  }
-});
+const mapDispatchToProps = {
+  onCityClick: ActionCreator.onCityClick
+};
 
 App.propTypes = {
   offers: PropTypes.array,

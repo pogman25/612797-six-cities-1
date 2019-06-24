@@ -5,6 +5,9 @@ import leaflet from 'leaflet';
 export default class Map extends Component {
   constructor(props) {
     super(props);
+
+    this.map = null;
+    this.layer = [];
   }
 
   componentDidMount() {
@@ -17,24 +20,41 @@ export default class Map extends Component {
       });
 
       const zoom = 12;
-      const map = leaflet.map(`map`, {
+      this.map = leaflet.map(`map`, {
         center: city,
         zoomControl: false,
         marker: true
       });
-      map.setView(city, zoom);
+      this.map.setView(city, zoom);
       leaflet
         .tileLayer(`https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png`, {
           attribution: `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>`
         })
-        .addTo(map);
+        .addTo(this.map);
 
-      this.props.offers.forEach(function (item) {
-        leaflet
+      this.props.offers.forEach((item) => {
+        this.layer = [...this.layer, leaflet
         .marker(item.coords, {icon})
-        .addTo(map);
+        .addTo(this.map)];
       });
     }
+  }
+
+  componentDidUpdate () {
+    const icon = leaflet.icon({
+      iconUrl: `img/pin.svg`,
+      iconSize: [30, 30]
+    });
+
+    this.layer.forEach((i) => {
+      this.map.removeLayer(i);
+    });
+
+    this.props.offers.forEach((item) => {
+      this.layer = [...this.layer, leaflet
+        .marker(item.coords, {icon})
+        .addTo(this.map)];
+    });
   }
 
   render() {
